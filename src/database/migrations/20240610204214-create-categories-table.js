@@ -14,7 +14,7 @@ module.exports = {
       allowNull: false,
       unique: true,
     },
-    
+
     created_at: {
       type: Sequelize.DATE,
       allowNull: false,
@@ -29,7 +29,6 @@ module.exports = {
   },
 
   async down (queryInterface) {
-    
      await queryInterface.dropTable('categories');
      
   }

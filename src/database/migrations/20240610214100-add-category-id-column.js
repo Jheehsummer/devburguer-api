@@ -16,7 +16,7 @@ module.exports = {
   },
 
   async down (queryInterface) {
-    await queryInterface.removeColumn('products', 'category_id',);
+    await queryInterface.removeColumn('products', 'category_id');
      
   }
 };
