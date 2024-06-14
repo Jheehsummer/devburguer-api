@@ -17,6 +17,11 @@ class App {
           '/product-file', 
           express.static(resolve(__dirname, '..', 'uploads')),
       );
+
+      this.app.use(
+        '/categoty-file', 
+        express.static(resolve(__dirname, '..', 'uploads')),
+    );
     }
 
     routes() {
