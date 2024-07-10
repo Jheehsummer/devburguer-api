@@ -22,7 +22,7 @@ class App {
       );
 
       this.app.use(
-        '/categoty-file', 
+        '/category-file', 
         express.static(resolve(__dirname, '..', 'uploads')),
     );
     }
