@@ -1,12 +1,12 @@
 /** @type {import('sequelize-cli').Migration} */ 
 module.exports = { 
   async up(queryInterface, Sequelize) { 
-    const tableDescription = await queryInterface.describeTable('products'); 
+    const tableDescription = await queryInterface.describeTable('Products'); 
     if (!tableDescription['category_id']) 
-      { await queryInterface.addColumn('products', 'category_id', { 
+      { await queryInterface.addColumn('Products', 'category_id', { 
       type: Sequelize.INTEGER, 
         references: { 
-          model: 'categories', 
+          model: 'Categories', 
           key: 'id', 
       }, 
       onUpdate: 'CASCADE', 
@@ -15,10 +15,10 @@ module.exports = {
     }); 
   } 
 }, async down(queryInterface) { 
-  const tableDescription = await queryInterface.describeTable('products'); 
+  const tableDescription = await queryInterface.describeTable('Products'); 
     if (tableDescription['category_id']) 
   { 
-    await queryInterface.removeColumn('products', 'category_id'); 
+    await queryInterface.removeColumn('Products', 'category_id'); 
   } 
   } 
 }

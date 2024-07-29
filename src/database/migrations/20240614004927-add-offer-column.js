@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-   queryInterface.addColumn('products', 'offer', { 
+   queryInterface.addColumn('Products', 'offer', { 
     type: Sequelize.BOOLEAN,
     defaultValue: false,
     allowNull: false,
@@ -12,7 +12,7 @@ module.exports = {
   },
 
   async down (queryInterface) {
-   queryInterface.removeColumn('products', 'offer');
+   queryInterface.removeColumn('Products', 'offer');
      
   },
 };
